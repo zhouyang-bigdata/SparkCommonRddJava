@@ -24,6 +24,7 @@ import java.util.List;
 public class Filter {
     public static void main(String[] args){
         SparkConf conf = new SparkConf();
+        conf.setAppName("Filter");
         conf.setMaster("local[2]");
         JavaSparkContext jsc = new JavaSparkContext(conf);
         JavaRDD<String> lines = jsc.textFile("F:\\sparktest\\sample.txt");
